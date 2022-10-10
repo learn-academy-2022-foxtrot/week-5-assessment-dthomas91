@@ -171,5 +171,7 @@ const hand4 = [7, 2, 7, 2, 7]
 // b) Create the function that makes the test pass.
 
 const fullHouse = (arr) => {
-  
+
 }
+
+// I got stuck here, I have absolutely no idea how to write the syntax to figure this problem out.

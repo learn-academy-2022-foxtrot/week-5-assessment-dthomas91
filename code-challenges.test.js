@@ -170,8 +170,42 @@ const hand4 = [7, 2, 7, 2, 7]
 
 // b) Create the function that makes the test pass.
 
-const fullHouse = (arr) => {
+/*Pseudocode
+    1. create a function and pass in an Array
+    2. create an empty object to pass in the values of each index that meets the desired result
+    3. iterate through the array
+    4. map through the object to return it to an array
+    5. use if else statements to determine if the hand is a full house or not
 
+*/
+
+
+
+const fullHouse = (arr) => {
+  let count = {}
+
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i]
+    if (!count[num]) {
+      count[num] = 1 
+    } else {
+      count[num]++
+    }
 }
 
-// I got stuck here, I have absolutely no idea how to write the syntax to figure this problem out.
+const countArr = Object.entries(count)
+
+const isTrue = countArr.map(([key, value]) => {
+  if (value === 2 || value === 3) {
+    return true
+  } else {
+    return false
+  }
+})
+
+  return !(isTrue.includes(false))
+}
+
+// PASS  ./code-challenges.test.js
+
+// With the help of Sunjay I was able to get this complete
